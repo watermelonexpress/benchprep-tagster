@@ -1,6 +1,6 @@
 # encoding: UTF-8
 module Benchprep
-  module Tagger
+  module Tagster
     class Runner
       def initialize(opts)
         @level   = opts[:level]
