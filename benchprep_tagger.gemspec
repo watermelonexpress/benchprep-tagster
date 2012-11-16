@@ -8,10 +8,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/watermelonexpress/benchprep_tagger'
   s.summary     = %q{Benchprep Tagging System}
 
-  s.bindir = 'bin'
-  s.executables = %w{tag}
-  # Load Paths...
-  s.files = FileList['{bin,lib}/**/*', 'README.markdown'].to_a
+  s.bindir        = 'bin'
+  s.executables   = %w{tag}
+  s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
 
   # Dependencies (installed via 'bundle install')...
