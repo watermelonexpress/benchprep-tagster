@@ -43,7 +43,7 @@ module Benchprep
         msg  = "Tag generated at #{Time.now} by #{user} using Benchprep Tagger."
         print "Creating tag locally - ".green
 
-        if `git tag -a #{@new_tag} -m #{msg}`
+        if `git tag -a "#{@new_tag}" -m "#{msg}"`
           puts "✓".green
         else
           puts "✗".red
@@ -58,7 +58,7 @@ module Benchprep
         end
 
         print "Pushing tag to remote - ".green
-        if `git tag --push`
+        if `git push --tags`
           puts "✓".green
         else
           puts "✗".red
