@@ -24,4 +24,5 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-Benchprep::Tagger.tag(options)
+tagger = Benchprep::Tagger::Runner.new(options)
+tagger.run

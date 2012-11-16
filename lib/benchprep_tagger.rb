@@ -5,6 +5,6 @@ module Benchprep
     require 'colored'
 
     require 'benchprep_tagger/version'
-    require 'benchprep_tagger/base'
+    require 'benchprep_tagger/runner'
   end
 end
