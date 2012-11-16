@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+$:.push File.expand_path('../../lib', __FILE__)
+
+require 'optparse'
+require 'colored'
+require 'pathname'
+require 'benchprep_tagger'
+
+options = {level: :minor}
+OptionParser.new do |opts|
+  opts.banner = "Usage: tagger [options]"
+  opts.on("--major", "Tag for major deploy") do |v|
+    options[:level] = :major
+  end
+  opts.on("--minor", "Tag for minor deploy") do |v|
+    options[:level] = :minor
+  end
+  opts.on("--dry-run", "Does the dry run deploy") do |v|
+    options[:dry_run] = true
+  end
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    exit
+  end
+end.parse!
+
+Benchprep::Tagger.tag(options)
