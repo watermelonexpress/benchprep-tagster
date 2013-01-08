@@ -1,12 +1,13 @@
 # Benchprep Tagster
 
-Benchprep TagSter is an automated system to identify, version,
+Benchprep Tagster is a small set of commands to identify, version,
 created and push git tags for deployments.
+It is easy to integrate into any of your deployment systems (vlad, cap etc)
 
 ## Usage
 
 1. Include gem in your gemfile
-2. Run `bundle exec tag` to create and push minor(default) tag 
+2. Run `bundle exec tag` to create and push minor(default) tag
 3. Profit!
 
 ## Options
