@@ -27,6 +27,7 @@ module Benchprep
 
       def process
         check_git
+        fetch_latest_tags
         check_latest_tag
         idenfity_tag
         create_tag
@@ -104,6 +105,12 @@ module Benchprep
       def latest_sha
         @latest_sha ||= `git rev-parse --verify HEAD`.to_s
       end
+
+      def fetch_latest_tags
+        puts "Fetching latest tags".green
+        `git fetch --tags`
+      end
+
     end
   end
 end
