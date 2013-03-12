@@ -75,7 +75,10 @@ module Benchprep
           minor, sha = parts[-1].split('_')
           msg        = parts[0...-2].join('.')
           minor      = minor.to_i + 1 if @level == :minor
-          major      += 1 if @level == :major
+          if @level == :major
+            major += 1
+            minor = 0
+          end
           @new_tag   = "#{msg}.#{major}.#{minor}_#{latest_sha[0..4]}"
           puts @new_tag.green
         rescue Exception => e
