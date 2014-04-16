@@ -29,7 +29,7 @@ module Benchprep
         check_git
         fetch_latest_tags
         check_latest_tag
-        idenfity_tag
+        identify_tag
         create_tag
         push_tag
       end
@@ -67,7 +67,7 @@ module Benchprep
         end
       end
 
-      def idenfity_tag
+      def identify_tag
         print "Generating new tag - ".green
         begin
           parts      = @latest_tag.split(".")
