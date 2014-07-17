@@ -1,3 +1,6 @@
+### 0.1.3
+- Ensures tag is returned
+
 ### 0.1.2
 - Adds changelog
 - Adds `v` to initial tag creation

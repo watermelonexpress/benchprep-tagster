@@ -104,6 +104,7 @@ module Benchprep
       def latest_tag
         @latest_tag ||= `git describe --abbrev=0 --tags`.to_s
         @latest_tag = 'v0.0.0_0' if @latest_tag.empty?
+        return @latest_tag
       end
 
       def latest_sha
