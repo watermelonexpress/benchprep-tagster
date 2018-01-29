@@ -1,3 +1,6 @@
+### 0.1.4
+- Adding deploy branch preparation
+
 ### 0.1.3
 - Ensures tag is returned
 

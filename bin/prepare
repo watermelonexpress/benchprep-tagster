@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'date'
+
+begin
+  release_date = ARGV[0] ? Date.parse(ARGV[0]) : Date.today
+
+  until release_date.thursday? do
+    release_date = release_date.next
+  end
+
+  release_date = release_date.strftime('%Y%m%d')
+
+  `git checkout -b deploy-#{release_date}`
+  `git push origin deploy-#{release_date}`
+rescue => exception
+  puts "An unexpected error occurred: #{exception.message}"
+end
