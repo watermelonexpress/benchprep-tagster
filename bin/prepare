@@ -11,9 +11,12 @@ begin
   end
 
   release_date = release_date.strftime('%Y%m%d')
+  current_branch_name = `git branch | grep \\* | cut -d ' ' -f2`
+  deploy_branch_name = "deploy-#{release_date}"
 
-  `git checkout -b deploy-#{release_date}`
-  `git push origin deploy-#{release_date}`
+  puts `git pull origin #{current_branch_name}`
+  puts `git checkout -b #{deploy_branch_name}`
+  puts `git push origin #{deploy_branch_name}`
 rescue => exception
   puts "An unexpected error occurred: #{exception.message}"
 end
