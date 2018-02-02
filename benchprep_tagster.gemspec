@@ -1,4 +1,7 @@
 $:.push File.expand_path('../lib', __FILE__)
+
+require "benchprep_tagster/version"
+
 Gem::Specification.new do |s|
   s.name        = 'benchprep_tagster'
   s.version     = Benchprep::Tagster::VERSION
