@@ -23,7 +23,7 @@ without pushing it to the remote and creating it locally
 2.  Execute `prepare` using Bundler
     - Example: `bundle exec prepare`
     - This will create and push a branch using the agreed upon branch naming convention (`deploy-YYYYDDMM`) where `YYYYDDMM` refers to the _deployment_ date, not the date on which the branch is created.
-    - NOTE:  If no script parameters are specified, the script assumes the deployment date will be the upcoming Thursday relative to the day on which the branch is created.  For example, if the branch is created on Tuesday, April 3 2018, a branch named `deploy-20180405` will be created.
+    - NOTE:  If no script parameters are specified, the script assumes the deployment date will be the one week from the day on which the branch is created.  For example, if the branch is created on Thursday, August 22, 2019, a branch named `deploy-20190829` will be created.
 
 ### Options
 
