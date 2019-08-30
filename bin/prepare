@@ -6,8 +6,7 @@ begin
   if ARGV[0]
     release_date = Date.parse ARGV[0]
   else
-    release_date = Date.today
-    release_date = release_date.next until release_date.thursday?
+    release_date = Date.today + 7
   end
 
   release_date = release_date.strftime('%Y%m%d')
