@@ -1,3 +1,6 @@
+### 0.1.6
+- Remove usage of Date.tomorrow helper
+
 ### 0.1.5
 - Update prepare task to tag release for 1 week from current day
 
