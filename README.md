@@ -1,5 +1,7 @@
 # Benchprep Tagster
 
+## This project is deprecated. The functionality has been ported to the [`bp`][1] utility CLI.
+
 Benchprep Tagster is a small set of commands to identify, version,
 created and push git tags for deployments.
 It is easy to integrate into any of your deployment systems (vlad, cap etc)
@@ -30,3 +32,5 @@ without pushing it to the remote and creating it locally
 1.  You can optionally pass a date parameter.  This date value should represent the anticpated deployment date.  The date should be formatted as follows: `YYYYMMDD`.
 2.  Example:  `bundle exec prepare 20180411`
     - The result of this example would be a new branch named `deploy-20180411`
+
+[1]: https://github.com/watermelonexpress/bp
